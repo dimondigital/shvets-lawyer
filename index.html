@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta property="og:image:url" content="https://image.ibb.co/fHNywc/666.jpg"/>
+  <meta property="og:image:type" content="image/jpeg"/>
+  <meta property="og:image:secure_url" content="https://image.ibb.co/fHNywc/666.jpg"/>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+  <title>Михаил Швец</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/starter-style.css">
+  <link rel="stylesheet" href="css/main-style.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #page-preloader {
+      position: fixed;
+      display: flex;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: black;
+      z-index: 100500;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #page-preloader .spinner {
+      display: flex;
+      align-self: center;
+      margin: 0 auto;
+      line-height: 100vh;
+      width: 100px;
+      height: 100px;
+      background: url('src/shvets_preloader-animation.gif') 50% 50% no-repeat;
+      background-size: cover;
+
+      -webkit-backface-visibility: hidden;
+    }
+  </style>
+</head>
+<body class='font-elizabeth font-size-normal'>
+<!-- preloader -->
+<div id="page-preloader">
+  <div class="spinner"><img></div>
+</div>
+<!-- case-popup -->
+<div class="case-popup col-xs-12 animated fadeIn" id="casePopup" hidden>
+
+  <div class="case-popup-content col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+    <a class="popup-close font-size-extra-large" href="javascript:hidePopup('#casePopup')">X</a>
+    <!-- <div class="bg"></div> -->
+    <div
+      class="inner col-lg-offset-1 col-lg-10 col-md-offset-0 col-md-12 col-sm-offset-0 col-sm-12 col-xs-offset-0 col-xs-12">
+
+      <p class="number col-xs-12" style="text-align: left;"></p>
+
+      <p class="caption col-xs-12" style="text-align: left;"></p>
+
+      <div class="plf col-lg-offset-1 col-md-offset-0 col-lg-5 col-md-6 col-sm-6 col-xs-12 text-align-right">
+        <p>Истец</p>
+        <p class='plf-name'></p>
+        <p class="my-client font-size-small" hidden>Мой клиент</p>
+      </div>
+      <div class="def col-lg-5 col-md-6 col-xs-12  col-sm-6 text-align-left">
+        <p>Ответчик</p>
+        <p class='def-name'></p>
+        <p class="my-client font-size-small" hidden>Мой клиент</p>
+      </div>
+      <div class="description rbt-plain-txt"></div>
+      <div class="hammer"></div>
+      <p>Решение суда</p>
+      <p class="desicion rbt-plain-txt"></p>
+      <a class='des-link' href="" target="_blank">посмотреть решение суда</a>
+    </div>
+  </div>
+</div>
+<!-- header -->
+<section class='header' style="    align-items: center;
+    display: flex;">
+  <div class="container">
+    <div class="descriptor col-xs-12 col-sm-5 col-md-5 col-lg-5 animated fadeIn">
+      <p>частный юрист</p>
+      <p class='name font-old-classic col-xs-12'>Михаил Швец</p>
+    </div>
+    <div class="logo col-xs-12 col-sm-2 col-md-2 col-lg-2 animated fadeIn">
+      <img src="https://image.ibb.co/knbhpb/logo.png" alt="" class='img-responsive'>
+    </div>
+    <div class="phones col-xs-12 col-sm-5 col-md-5 col-lg-5 animated fadeIn">
+      <p class='font-roboto-slab'><a href="tel:+380688870466">068 887 04 66</a></p>
+      <p class='font-roboto-slab'><a href="tel:+380638254835">063 825 48 35</a></p>
+    </div>
+  </div>
+</section>
+<!-- main -->
+<section class="main">
+  <div class="container text-align-right font-size-extra-large">
+    <div class="caption text-align-right  xs-text-align-center">
+      <h2>Широкий</h2>
+      <h2>спектр услуг</h2>
+      <h2>по защите</h2>
+      <h2>ваших</h2>
+      <h2>прав</h2>
+    </div>
+
+  </div>
+</section>
+
+<!-- leave-request -->
+<section class="leave-request font-roboto-slab">
+
+  <div class="container col-sm-offset-3 col-sm-12 col-lg-6 col-md-6 col-xs-12">
+
+    <form id="call-form" class="callbackform col-xs-12 col-sm-12 col-md-10 text-align-center float-right" method="post">
+      <input type="hidden" name="act" value="callback" hidden>
+      <p>Оставьте заявку на</p>
+      <p class=''><!-- бесплатную  -->консультацию</p>
+      <input id="name" name="name" required="required" placeholder="Имя Отчество">
+      <input id="tel" type="tel" name="tel" required="required" placeholder="Телефон">
+      <input class="animation special-button form-close font-size-small" type="submit" value="Отправить заявку"/>
+    </form>
+    <div class="soldier hidden-xs"></div>
+  </div>
+  <div class="bg col-sm-6 hidden-sm hidden-xs"></div>
+</section>
+
+<!-- my-services -->
+<section class='my-services'>
+  <div class="container">
+    <h1>Мои услуги</h1>
+    <div class="list text-align-left">
+      <ul class='col-lg-5 col-lg-offset-1'>
+        <!-- <div class="list-marker"></div> -->
+        <li>жилищные споры</li>
+        <li>-</li>
+        <li>представительство в судах</li>
+        <li>-</li>
+        <li>юридическое сопровождение сделок</li>
+        <li>-</li>
+        <li>помощь с задолженностью перед комунальными службами</li>
+        <li>-</li>
+        <li>составление исковых заявлений</li>
+        <li>-</li>
+        <li>земельное право</li>
+        <li>-</li>
+        <li>консультации</li>
+        <li>-</li>
+        <li>раздел имущества</li>
+        <li>-</li>
+        <li>абонентское юридическое обслуживание</li>
+        <li>-</li>
+        <li>помощь в составлении договоров, претензий, жалоб</li>
+        <li>-</li>
+        <li>семейные споры</li>
+        <li>-</li>
+        <li>трудовые споры</li>
+        <li>-</li>
+        <li>наследство</li>
+        <li>-</li>
+        <li>многое другое...</li>
+      </ul>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- expirience -->
+<section class="expirience lg-flex">
+  <div class="left-col col-md-6 col-xs-12 no-padding">
+    <!-- <div class="bg float-left col-xs-12"></div> -->
+    <div class="photo col-xs-12"></div>
+  </div>
+  <div class="right-col col-md-6 col-xs-12 text-align-left font-size-small">
+
+    <ul class="font-roboto-slab font-size-initial">
+      <li><h3 class="font-elizabeth">Образование</h3></li>
+      <p class="time font-roboto-slab"></p>
+      <p>Запорожский Национальный Университет</p>
+      <p>Юридический факультет. Специалист.</p>
+      <li><h3 class="font-elizabeth">Опыт работы</h3></li>
+      <p class="time font-roboto-slab">2009 - 2012</p>
+      <p>КП "Днепродзержинское Жилищное Объединение"</p>
+      <p>Юрист</p>
+      <p class="time font-roboto-slab">2012 - 2013</p>
+      <p>АТ "Ощадбанк"</p>
+      <p>Главный юрисконсульт</p>
+      <p class="time font-roboto-slab">2013 - 2014</p>
+      <p>МП "Днепродзержинский сталеварный завод" ДП ПАТ "Днепровагонмаш"</p>
+      <p>Юрисконсульт II категории.</p>
+      <p class="time font-roboto-slab">с 2015го</p>
+      <p>Частный Предприниматель. Деятельность в сфере права.</p>
+    </ul>
+    <!--      <div class="lion"></div>-->
+
+  </div>
+  <div class="lion"></div>
+</section>
+
+<!-- cases -->
+<section class="cases col-xl-12">
+  <div class="container">
+    <h1>90% успешных дел -<p>вот некоторых из них</p></h1>
+
+    <div class="case text-align-left col-sm-12">
+      <div class="caption col-sm-8">Взыскание задолженности перед агенством недвижимости</div>
+      <a href="javascript:showPopup('#casePopup', 0)">
+        <button class='col-sm-4 col-xs-12 font-size-small font-roboto-slab float-right'>подробнее</button>
+      </a>
+    </div>
+    <div class="case text-align-left col-sm-12">
+      <div class="caption col-sm-8">Защита прав клиента перед банком по поводу кредита</div>
+      <a href="javascript:showPopup('#casePopup', 1)">
+        <button class='col-sm-4 col-xs-12  font-size-small font-roboto-slab float-right'>подробнее</button>
+      </a>
+    </div>
+    <div class="case text-align-left col-sm-12">
+      <div class="caption col-sm-8 float-left">Супружеский раздел имущества</div>
+      <a href="javascript:showPopup('#casePopup', 2)">
+        <button class='col-sm-4 col-xs-12  font-size-small font-roboto-slab float-right'>подробнее</button>
+      </a>
+    </div>
+    <div class="case text-align-left col-sm-12">
+      <div class="caption col-sm-8">Взыскание с предприятия задолженности по зарплате</div>
+      <a href="javascript:showPopup('#casePopup', 3)">
+        <button class='col-sm-4 col-xs-12  font-size-small font-roboto-slab float-right'>подробнее</button>
+      </a>
+    </div>
+    <div class="case text-align-left col-sm-12">
+      <div class="caption col-sm-8">Взыскание банковского депозита</div>
+      <a href="javascript:showPopup('#casePopup', 4)">
+        <button class=' col-sm-4 col-xs-12  font-size-small font-roboto-slab float-right'>подробнее</button>
+      </a>
+    </div>
+    <div class="case text-align-left col-sm-12">
+      <div class="caption col-sm-8">Жилищный спор</div>
+      <a href="javascript:showPopup('#casePopup', 5)">
+        <button class='col-sm-4 col-xs-12 font-size-small font-roboto-slab float-right'>подробнее</button>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- contacts -->
+<section class="contacts">
+
+  <div class="container">
+    <h1>Контакты</h1>
+
+
+    <div class="col-sm-12 col-md-6 content font-roboto-slab">
+      <p>г. Каменское (Днепродзержинск)</p>
+      <p>Левый Берег</p>
+      <p>проспект Героев АТО</p>
+      <p>ТК “Фантом”</p>
+      <p><a href="tel:+380688870466">068 887 04 66</a></p>
+      <p><a href="tel:+380638254835">063 825 48 35</a></p>
+      <p class='mail'>Shvets-zakon@i.ua</p>
+    </div>
+    <div id="map" class="col-xs-12 col-md-6 content"></div>
+  </div>
+
+</section>
+<section class="footer col-xs-12 font-roboto-slab">
+  <div class="links col-sm-12 col-md-4 col-xs-12">
+    <a href="https://vk.com/id24634653" target="_blank">
+      <img src="https://image.ibb.co/feo6FG/vk_icon.png" alt="">
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=100009251734474" target="_blank">
+      <img src="https://image.ibb.co/k7GyUb/facebook_icon.png" alt="">
+    </a>
+  </div>
+  <div class="thanks col-sm-12  col-md-4">
+    <!--      <p>Спасибо за ваше</p>-->
+    <!--      <p>внимание</p>-->
+  </div>
+  <div class="developer font-size-small col-sm-12 col-md-4 col-xs-12">
+    <a href="https://dimondigitall.web.app" target="_blank">
+      <p style="font-size: 0.5em;">developed by</p>
+      <img src="../../logo-small.jpg" alt="">
+    </a>
+  </div>
+</section>
+
+<script src="bower_components/gsap/src/minified/TimelineMax.min.js"></script>
+<script src="bower_components/gsap/src/minified/plugins/ScrollToPlugin.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+<script src="bower_components/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+<script src="bower_components/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+<script src='bower_components/jquery-mask-plugin/dist/jquery.mask.min.js'></script>
+<script src='scripts/main.js'></script>
+<script src="scripts/casePopup.js"></script>
+<script src='scripts/call-form.js'></script>
+<script>
+
+  function initMap() {
+    var map;
+    var pos = {lat: 48.592900, lng: 34.557842};
+    map = new google.maps.Map(document.getElementById('map'), {
+      scaleControl: true,
+      center: pos,
+      zoom: 14
+    });
+    var marker = new google.maps.Marker({map: map, position: pos});
+  }
+
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz6eLo5feWbjAFpd6qV0c1tN5Cl2X0--4&callback=initMap"
+        async defer></script>
+<!-- <script src='scripts/yandex-map.js'></script> -->
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-98294813-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

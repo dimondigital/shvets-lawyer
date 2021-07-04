@@ -1,0 +1,53 @@
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  .lg-flex {
+    display: flex;
+  }
+
+  .contacts .content {
+    min-height: 735px;
+  }
+  .md-float-none {
+    float: none; }
+  .special-button {
+    width: 80% !important; } }
+
+@media (min-width: 768px) {
+  .header .descriptor {
+    text-align: left;
+  }
+  .header .phones {
+    text-align: right;
+  }
+}
+
+/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  .xs-text-align-center {
+    text-align: center; } }
+
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .lg-flex {
+    /*display: block;*/
+  }
+  .md-float-none {
+    float: none; } }
+
+/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+
+  .lion {
+    min-width: 200px !important; }
+  .links a img {
+    width: 70px !important; } }
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  .xs-text-align-center {
+    text-align: justify; } }
